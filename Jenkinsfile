@@ -16,6 +16,7 @@ pipeline
                     echo "APPLICATION WILL BE DEPLOYED TO TEST SERVER";
                     git checkout test
                     git branch
+                    echo "Current branch is :${BRANCH_NAME}";
                 }                              
                 if("$server".matches("STAGE SERVER"))
                 {
