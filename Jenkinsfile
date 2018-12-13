@@ -4,19 +4,15 @@ pipeline
     {
         stage("checking branch")
         {
-            stapes
-            {
-                checkout scm
-                script
-                {
-                    if($server="TEST SERVER")
-                    git checkout test
-                    else if($server="STAGE SERVER")
-                    git checkout stage
-                    else if($server="PRODUCTION SERVER")
-                    git checkout prod
-                }
-            }
+           steps
+           {
+               if(env.server='TEST SERVER')
+                    echo "SELECTION IS TEST SERVER"
+                else if(env.server='STAGE SERVER')
+                    echo "SELECTION IS STAGE SERVER"
+                else if(env.server="PRODUCTION SERVER")
+                    echo "SELECTION IS PRODUCTION SERVER"
+           }
         }
     }
 }
