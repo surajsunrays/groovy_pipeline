@@ -13,13 +13,15 @@ pipeline
                 echo "Value of server is $server";
                 if("$server".matches("TEST SERVER"))
                 {
-                    echo "YOU SELECTED TEST SERVER";
+                    echo "APPLICATION WILL BE DEPLOYED TO TEST SERVER";
+                    git checkout test
+                    git branch
                 }                              
-                if('$server'=='STAGE SERVER')
+                if("$server".matches("STAGE SERVER"))
                 {
                     echo "YOU SELECTED STAGE SERVER";
                 }
-                if('$server'=='PRODUCTION SERVER')
+                if("$server".matches("PRODUCTION SERVER"))
                 {
                     echo "YOU SELECTED PRODUCTION SERVER";
                 }
