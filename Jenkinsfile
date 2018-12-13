@@ -10,9 +10,10 @@ pipeline
                 checkout scm
                 script
                 {
-                
                 echo "Value of server is $server";
-                if('$server'=='TEST SERVER')
+                String a=$server;
+                println(a);
+                if("$server"="TEST SERVER")
                 {
                     echo "YOU SELECTED TEST SERVER";
                 }                              
