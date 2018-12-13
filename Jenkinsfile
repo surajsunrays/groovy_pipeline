@@ -11,9 +11,9 @@ pipeline
                 script
                 {
                 echo "Value of server is $server";
-                String a=$server;
+                String a = $server;
                 println(a);
-                if("$server"=="TEST SERVER")
+                if('$server'=="TEST SERVER")
                 {
                     echo "YOU SELECTED TEST SERVER";
                 }                              
