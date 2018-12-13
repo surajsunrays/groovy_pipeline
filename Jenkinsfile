@@ -4,7 +4,7 @@ pipeline
     {
         stage("checking branch")
         {
-            stapes
+            steps
             {
                 checkout scm
                 script
