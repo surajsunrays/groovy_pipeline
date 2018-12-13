@@ -20,11 +20,15 @@ pipeline
                 }                              
                 if("$server".matches("STAGE SERVER"))
                 {
-                    echo "YOU SELECTED STAGE SERVER";
+                    echo "APPLICATION WILL BE DEPLOYED TO STAGING SERVER";
+                    sh 'git checkout stage'
+                    sh 'git branch'
                 }
                 if("$server".matches("PRODUCTION SERVER"))
                 {
-                    echo "YOU SELECTED PRODUCTION SERVER";
+                    echo "APPLICATION WILL BE DEPLOYED TO PRODUCTION SERVER";
+                    sh 'git checkout prod'
+                    sh 'git branch'
                 }
                 
             }
