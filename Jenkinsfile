@@ -8,8 +8,7 @@ pipeline
             steps
             {
                 checkout scm
-                script
-                {
+               
                 echo "Value of server is $server";
                 if('$server'.matches("TEST SERVER"))
                 {
@@ -24,7 +23,7 @@ pipeline
                     echo "YOU SELECTED PRODUCTION SERVER";
                 }
                 
-            }
+            
         }
     }
 }
