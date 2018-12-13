@@ -8,6 +8,9 @@ pipeline
             steps
             {
                 checkout scm
+                script
+                {
+                
                 echo "Value of server is $server";
                 if($server=='TEST SERVER')
                 {
@@ -24,4 +27,5 @@ pipeline
             }
         }
     }
+}
 }
